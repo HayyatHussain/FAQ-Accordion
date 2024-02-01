@@ -56,7 +56,6 @@ p {
     background-color: hsl(292, 42%, 14%);
     background-image: url(./assets/images/background-pattern-desktop.svg);
     background-repeat: no-repeat;
-    background-size: cover;
 }
 
 #main-content {
@@ -84,6 +83,8 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
+    transition: all 240ms;
 }
 
 #main-content .content {
@@ -94,7 +95,10 @@ p {
     border-bottom: 2px solid hsl(275, 100%, 97%);
 }
 
-#main-content .hidden {
-    height: 0px;
+#visible, .hidden {
     overflow-y: hidden;
+}
+
+.hidden {
+    height: 0;
 }
