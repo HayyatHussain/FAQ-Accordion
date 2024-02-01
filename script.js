@@ -16,8 +16,8 @@ var testUnit2 = true;
 var testUnit3 = true;
 var testUnit4 = true;
 
-const queryOpener = (query) => {
-    query.style.height = "100%";
+const queryOpener = (query, size) => {
+    query.style.height = size;
     testUnit1 = true;
     testUnit2 = false;
     testUnit3 = false;
@@ -36,13 +36,13 @@ queryHeading1.addEventListener("click", () => {
     if (testUnit1) {
         queryCloser(query1);
     } else {
-        queryOpener(query1);
+        queryOpener(query1, "85.4px");
     }
 });
 
 queryHeading2.addEventListener("click", () => {
     if (testUnit2) {
-        queryOpener(query2);
+        queryOpener(query2, "85.4px");
     } else {
         queryCloser(query2);
     }
@@ -50,7 +50,7 @@ queryHeading2.addEventListener("click", () => {
 
 queryHeading3.addEventListener("click", () => {
     if (testUnit3) {
-        queryOpener(query3);
+        queryOpener(query3, "120.6px");
     } else {
         queryCloser(query3);
     }
@@ -58,7 +58,7 @@ queryHeading3.addEventListener("click", () => {
 
 queryHeading4.addEventListener("click", () => {
     if (testUnit4) {
-        queryOpener(query4);
+        queryOpener(query4, "103px");
     } else {
         queryCloser(query4);
     }

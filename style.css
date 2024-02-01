@@ -84,7 +84,6 @@ p {
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    transition: all 240ms;
 }
 
 #main-content .content {
@@ -97,6 +96,7 @@ p {
 
 #visible, .hidden {
     overflow-y: hidden;
+    transition: all 400ms ease;
 }
 
 .hidden {
