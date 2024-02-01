@@ -114,6 +114,13 @@ p {
   height: 0;
 }
 
+#svg-hidden-1,
+#svg-hidden-2,
+#svg-hidden-3,
+#svg-hidden-4 {
+  display: none;
+}
+
 @media (max-width: 600px) {
   #main-content {
     width: 90vw;
