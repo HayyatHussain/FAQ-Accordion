@@ -22,6 +22,7 @@ var testUnit2 = true;
 var testUnit3 = true;
 var testUnit4 = true;
 
+// Function to open the queries
 const queryOpener = (query, size) => {
   query.style.height = size;
   testUnit1 = false;
@@ -30,6 +31,7 @@ const queryOpener = (query, size) => {
   testUnit4 = false;
 };
 
+// Function to close the queries
 const queryCloser = (query) => {
   query.style.height = "0";
   testUnit1 = true;
@@ -38,11 +40,13 @@ const queryCloser = (query) => {
   testUnit4 = true;
 };
 
+// Function to change the SVGs
 const svgChangeHandler = (openSvg, closeSvg) => {
   openSvg.style.display = "inline";
   closeSvg.style.display = "none";
 };
 
+// Function to identify whether queryOpener() or queryCloser() should be executed
 const queryClickHandler = (test, query, size, openSvg, closeSvg) => {
   if (test) {
     queryOpener(query, size);
@@ -52,6 +56,8 @@ const queryClickHandler = (test, query, size, openSvg, closeSvg) => {
     svgChangeHandler(closeSvg, openSvg);
   }
 };
+
+// Click event listeners
 
 queryHeading1.addEventListener("click", () => {
   queryClickHandler(testUnit1, query1, "85.4px", defaultSvg1, nonDefaultSvg1);
@@ -67,4 +73,35 @@ queryHeading3.addEventListener("click", () => {
 
 queryHeading4.addEventListener("click", () => {
   queryClickHandler(testUnit4, query4, "103px", nonDefaultSvg4, defaultSvg4);
+});
+
+// For Users to navigate with keyboard only
+queryHeading1.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    queryClickHandler(testUnit1, query1, "85.4px", defaultSvg1, nonDefaultSvg1);
+  }
+});
+
+queryHeading2.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    queryClickHandler(testUnit2, query2, "85.4px", nonDefaultSvg2, defaultSvg2);
+  }
+});
+
+queryHeading3.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    queryClickHandler(
+      testUnit3,
+      query3,
+      "120.6px",
+      nonDefaultSvg3,
+      defaultSvg3
+    );
+  }
+});
+
+queryHeading4.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    queryClickHandler(testUnit4, query4, "103px", nonDefaultSvg4, defaultSvg4);
+  }
 });
