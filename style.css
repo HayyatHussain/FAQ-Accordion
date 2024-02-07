@@ -122,8 +122,14 @@ p {
 }
 
 @media (max-width: 600px) {
+  body {
+    height: 130%;
+  }
+
   #main-content {
     width: 90vw;
+    top: 70%;
+    left: 50%;
   }
 
   #main-content .content-heading h4 {
