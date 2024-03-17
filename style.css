@@ -43,10 +43,6 @@ h4 {
   cursor: pointer;
 }
 
-h4:hover {
-  color: hsl(292, 16%, 49%);
-}
-
 p {
   font-size: 14.95px;
   color: hsl(292, 16%, 49%);
@@ -92,6 +88,10 @@ p {
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+}
+
+#main-content .content-heading:hover h4 {
+  color: hsl(292, 16%, 49%);
 }
 
 #main-content .content {
